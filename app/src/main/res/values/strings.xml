@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TeleTrivia</string>
+    <string name="texto1">¡Bienvenido a la TeleTrivia!</string>
+    <string name="texto2">La app está diseñada para testear tu conocimiento y retar a tus amigos!</string>
+    <string name="texto3">A continuación, elija los parámetros del juego</string>
+    <string name="txtCategoria">Categoría</string>
+    <string name="txtDificultad">Dificultad</string>
+    <string name="txtConexion">Comprobar conexión</string>
+    <string name="txtComenzar">Comenzar</string>
+    <string name="txtCant">Cantidad</string>
+
+
+
+
 </resources>
