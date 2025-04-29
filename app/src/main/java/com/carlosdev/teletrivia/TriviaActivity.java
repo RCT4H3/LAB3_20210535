@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
@@ -28,6 +29,10 @@ public class TriviaActivity extends AppCompatActivity {
     private RadioGroup radioGroupOptions;
     private Button btnNext;
 
+    private TextView numQuestion;
+
+
+    private TextView categoryTextView;
     private List<TriviaQuestion> questions;
     private int currentQuestionIndex = 0;
     private int correctCount = 0;
@@ -62,12 +67,17 @@ public class TriviaActivity extends AppCompatActivity {
 
         textViewQuestion = findViewById(R.id.textViewQuestion);
         textViewTimer = findViewById(R.id.textViewTimer);
+        categoryTextView = findViewById(R.id.category);
+        numQuestion = findViewById(R.id.numQuestion);
         radioGroupOptions = findViewById(R.id.radioGroupOptions);
         btnNext = findViewById(R.id.btnNext);
+
+
 
         int cantidad = getIntent().getIntExtra("cantidad", 5);
         String categoria = getIntent().getStringExtra("categoria");
         String dificultad = getIntent().getStringExtra("dificultad");
+        categoryTextView.setText("Categoría: " + categoria);
 
         totalTimeInSeconds = cantidad * getTimePerQuestion(dificultad);
         startTimer();
@@ -142,7 +152,9 @@ public class TriviaActivity extends AppCompatActivity {
         }
 
         TriviaQuestion current = questions.get(currentQuestionIndex);
-        textViewQuestion.setText(android.text.Html.fromHtml(current.question)); // algunas preguntas vienen con HTML
+        numQuestion.setText("Pregunta " + (currentQuestionIndex + 1) + "/" + questions.size());
+
+        textViewQuestion.setText(android.text.Html.fromHtml(current.question));
 
         for (String option : current.getShuffledAnswers()) {
             RadioButton radioButton = new RadioButton(this);
