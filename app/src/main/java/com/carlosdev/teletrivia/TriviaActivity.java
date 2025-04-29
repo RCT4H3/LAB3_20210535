@@ -44,7 +44,6 @@ public class TriviaActivity extends AppCompatActivity {
 
     private Handler mainHandler = new Handler(Looper.getMainLooper());
 
-    // Clase interna para mapear las preguntas
     static class TriviaQuestion {
         String question;
         @SerializedName("correct_answer")
@@ -63,7 +62,7 @@ public class TriviaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trivia); // usa el layout que mostraste
+        setContentView(R.layout.activity_trivia);
 
         textViewQuestion = findViewById(R.id.textViewQuestion);
         textViewTimer = findViewById(R.id.textViewTimer);
