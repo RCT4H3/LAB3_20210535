@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Holam"
-        android:layout_width="415dp"
-        android:layout_height="119dp"
+        android:layout_width="397dp"
+        android:layout_height="114dp"
         android:background="@drawable/rounded_background_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -37,7 +37,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="34dp"
         android:layout_marginTop="64dp"
         android:text="@string/txtCorrectas"
         android:textColor="@color/black"
@@ -51,7 +51,7 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="34dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="@string/txtIncorrectas"
@@ -111,7 +111,7 @@
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="34dp"
         android:layout_marginTop="48dp"
         android:text="@string/txtSinResponder"
         app:layout_constraintEnd_toEndOf="parent"

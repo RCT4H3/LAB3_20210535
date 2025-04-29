@@ -93,7 +93,7 @@ public class TriviaActivity extends AppCompatActivity {
             try {
                 int categoryId = mapCategoria(category);
                 String urlStr = String.format(
-                        "https://opentdb.com/api.php?amount=%d&category=%d&difficulty=%s&type=multiple",
+                        "https://opentdb.com/api.php?amount=%d&category=%d&difficulty=%s&type=boolean",
                         amount, categoryId, difficulty
                 );
 
